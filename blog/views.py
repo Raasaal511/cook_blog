@@ -6,7 +6,9 @@ from .models import Post
 
 
 class HomeView(ListView):
-    pass
+    model = Post
+    paginate_by = 9
+    template_name = 'blog/home.html'
 
 
 class PostListView(ListView):
@@ -20,10 +22,5 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
-    template_name = 'blog/post_detail.html'
     slug_url_kwarg = 'post_slug'
     context_object_name = 'post'
-
-
-def home(request):
-    return render(request, 'base.html')

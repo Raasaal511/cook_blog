@@ -61,13 +61,13 @@
 
                     <div class="single-post__recipe__details__indegradients">
                         <h5>Ingredients</h5>
-                        {{ recipe.ingredients|striptags }}
+                        {{ recipe.ingredients|safe }}
 
 
                     </div>
                     <div class="single-post__recipe__details__direction">
                         <h5>Directions</h5>
-                        {{ recipe.directions|striptags }}
+                        {{ recipe.directions|safe }}
 
                     </div>
 
