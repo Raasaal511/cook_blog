@@ -286,7 +286,7 @@
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
                         {% for post in post_list %}
-                                {% if forloop.counter > 6 %}
+                                {% if forloop.counter >= 6 %}
                             <div class="categories__post__item">
                                 <div class="categories__post__item__pic small__item set-bg"
                                      data-setbg="{{ post.image.url }}">
