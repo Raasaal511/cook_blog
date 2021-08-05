@@ -1,5 +1,5 @@
 from django.contrib import admin
-from mptt.admin import MPTTModelAdmin, DraggableMPTTAdmin
+from mptt.admin import DraggableMPTTAdmin
 
 from .models import Category, Tag, Post, Recipe, Comment
 
@@ -16,6 +16,7 @@ class PostAdmin(admin.ModelAdmin):
     inlines = [RecipeInLine]
     save_as = True
     save_on_top = True
+
 
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
@@ -36,4 +37,3 @@ class RecipeAdmin(admin.ModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     pass
-
