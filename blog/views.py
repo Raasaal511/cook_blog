@@ -14,7 +14,6 @@ class PostListView(ListView):
 
     def get_queryset(self):
         # Возраащает посты отфилтьрованые по слагу и категриям
-        # self.kwargs.get('slug')) slug - это название которое обзначено в url.py
         return Post.objects.filter(category__slug=self.kwargs.get('slug')).select_related('category')
 
 
